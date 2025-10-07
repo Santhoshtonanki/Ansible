@@ -1,0 +1,21 @@
+- name: play level variables
+  hosts: localhost
+  connection: local
+  vars_files:
+    - course.yaml
+    - 05-task-level-variable.yaml
+    - 04-play-level-variable01.yaml
+    - 03-multi-play.yaml
+    - 02-inventory.ini
+    - 01-hello-world.yaml
+  vars:
+    Person_name: "santhosh tonanki"
+    age: 29
+    course: "DevOps with AWS"
+    duration: "5 hours"
+    trainer: "Sivakumar Reddy"
+  tasks:
+    - name: Print the course information
+      ansible.builtin.debug:
+        msg: "Hello world!  Person_name is {{ Person_name }}, age is {{ age }}, course is {{ course }}, Duration is {{ duration }}, and finally trainer is {{ trainer }}"
+        
