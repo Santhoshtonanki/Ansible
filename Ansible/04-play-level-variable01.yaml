@@ -1,0 +1,27 @@
+- name: play level variables
+  hosts: localhost
+  connection: local
+  vars:
+    person_name: "Santhosh Tonanki"
+    age: 29
+    course: "Ansible"
+    duration: "5 hours"
+    trainer: "Sivakumar Reddy"
+  tasks:
+    - name: print the course information
+      ansible.builtin.debug:
+        msg: "Hello world! My name is {{ person_name }}, and my age is {{ age }}, my course is {{ course }}, duration is {{ duration }}, and my trainer is {{ trainer }}."
+
+- name: second play with other variables
+  hosts: localhost
+  connection: local
+  vars:
+    person_name: "Bantupalli Gangayya"
+    age: 28
+    course: "DevOps"
+    duration: "1 hour"
+    trainer: "Sivakumar Reddy"
+  tasks:
+    - name: print the course information
+      ansible.builtin.debug:
+        msg: "Hello world! My name is {{ person_name }}, and my age is {{ age }}, my course is {{ course }}, duration is {{ duration }}, and my trainer is {{ trainer }}."
