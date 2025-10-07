@@ -12,4 +12,4 @@
       vars:
         course: "Ansible with sivakumar"
       ansible.builtin.debug:
-        msg: "Hello world! My name is {{ Persong_name }}, and my age is {{ age }}, my course is {{ course }}, duration is {{ duration }}, and my trainer is {{ trainer }}"
+        msg: "Hello world! My name is {{ Person_name }}, and my age is {{ age }}, my course is {{ course }}, duration is {{ duration }}, and my trainer is {{ trainer }}"
