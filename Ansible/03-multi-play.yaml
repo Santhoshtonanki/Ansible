@@ -2,7 +2,7 @@
   hosts: frontend
   tasks:
     - name: play-o1 task-01
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: "hello world form play-01 task-01"
         
     - name: play-01 task-02"
@@ -11,7 +11,7 @@
     
 
     - name: play-o2 task-01
-      ansible.builtin.debug
+      ansible.builtin.debug:
         msg: "hello world form play-01 task-01"
         
     - name: play-02 task-02"
