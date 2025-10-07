@@ -25,3 +25,6 @@
     - name: print the course information
       ansible.builtin.debug:
         msg: "Hello world! My name is {{ person_name }}, and my age is {{ age }}, my course is {{ course }}, duration is {{ duration }}, and my trainer is {{ trainer }}."
+#this code will not work because of the the is an additional space in hosts: local host, it should be localhost, 
+#also the variable names are case sensitive, so Person_name should be person_name, Age should be age, Course should be course, Duration should be duration, Trainer should be trainer.
+#corrected the indentation of the vars section, it should be aligned properly.
