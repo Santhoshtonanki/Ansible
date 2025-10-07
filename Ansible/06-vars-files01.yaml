@@ -6,8 +6,7 @@
     - 05-task-level-variable.yaml
     - 04-play-level-variable01.yaml
     - 03-multi-play.yaml
-    - 02-inventory.ini
-    - 01-hello-world.yaml
+   
   vars:
     Person_name: "santhosh tonanki"
     age: 29
