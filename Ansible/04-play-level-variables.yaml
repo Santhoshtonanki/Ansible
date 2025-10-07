@@ -12,7 +12,7 @@
       ansible.builtin.debug:
         msg: " hello world my name is {{ Name }}, and my age is {{ Age }} and my course is {{ Course }}, duration is {{ Duration }}, and my trainer is {{ Trainer }}"
 
--name: second play with different variables
+- name: second play with different variables
   hosts: local
   connection: localhost
   vars:
