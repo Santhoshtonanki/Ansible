@@ -2,7 +2,7 @@
   hosts: local host
   connection: local
   vars:
-    - name: "Santhosh Tonanki"
+    - Person_name: "Santhosh Tonanki"
       age: 29
       course: "Ansible"
       duration: "5 hours"
@@ -16,7 +16,7 @@
   hosts: local host
   connection: local
   vars:
-    - name: "Bantupalli Gangayya"
+    - Person_name: "Bantupalli Gangayya"
       age: 28
       course: "DevOps"
       duration: "1 hour"
