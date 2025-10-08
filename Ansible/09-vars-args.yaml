@@ -1,8 +1,8 @@
 - name: variables from args
-  hosts: local host
+  hosts: localhost
   connection: local
   vars:
-  - name: print credintials
+  - name: print credentials
     ansible.builtin.debug:
       msg: "name is {{ name }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
 
