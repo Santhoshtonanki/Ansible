@@ -4,5 +4,5 @@
   connection: local
   tasks:
   - name: print credintials
-    ansbile.builtin.debug:
+    ansible.builtin.debug:
       msg: "person_name is {{ person_name }}, age is {{ age }}, course name is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
