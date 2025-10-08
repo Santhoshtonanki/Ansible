@@ -8,7 +8,7 @@
 
   - name: "password"
     Prompt: "what is your password?"
-    Private: no
+    Private: yes
 
   tasks:
   - name: Print credintials
