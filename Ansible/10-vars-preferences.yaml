@@ -1,17 +1,17 @@
-- name: variables bigip_profile_persistence_src_addr:
+- name: variables from preferences
   hosts: localhost
   connection: local
   vars: 
-  - name: preference from play level
+    NAME: preference from play level
   vars_files:
   - course.yaml
   vars_prompt: 
-  - name: "username"
-    prompt: "what is your username?"
+  - name: "NAME"
+    prompt: "what is your NAME?"
     private: "no"
   tasks:
-  - name: 
+  - name: testing variables preference
     vars: 
-      name: preference from task level
+      NAME: preference from task level
     ansible.builtin.debug:
-      msg: "name is {{ username }}"
+      msg: "Name is {{ NAME }}"
