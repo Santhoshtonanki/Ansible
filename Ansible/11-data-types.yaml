@@ -23,3 +23,6 @@
   - name: print credintials
     ansible.builtin.debug:
       msg: "name is {{ name }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}, tools are {{ tools }}, concepts are {{ concepts }}"
+
+      # list []
+      # dictionary/map {}
