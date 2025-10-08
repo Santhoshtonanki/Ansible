@@ -2,7 +2,7 @@
   hosts: localhost
   connection: local
   vars:
-  - person_name: santhosh tonanki
+    person_name: santhosh tonanki
     age: 29
     course: DevOps
     duration: "120 days"
@@ -10,4 +10,4 @@
   tasks:
   - name: print credintials
     ansible.builtin.debug:
-      msg: "name is {{ person }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
+      msg: "name is {{ person_name}}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
