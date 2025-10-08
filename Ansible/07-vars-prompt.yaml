@@ -1,13 +1,13 @@
 - name: variables from prompt
   hosts: localhost
   connection: local
-  Vars_prompt:
+  vars_prompt:
   - name: "username"
     prompt: "what is your username?"
-    Private: no
+    private: no
   - name: "password"
-    Prompt: "what is your password?"
-    Private: yes
+    prompt: "what is your password?"
+    private: yes
 
   tasks:
   - name: Print credintials
