@@ -1,0 +1,25 @@
+- name: data_types
+  hosts: localhost
+  connection: local
+  vars:
+    name: santhosh tonanki # string
+    age: 29 # integer
+    course: DevOps with aws
+    duration: 120
+    trainer: sivakumar_reddy"
+    # list
+    tools: #[linux, aws, docker, ansible]
+    - linux
+    - aws
+    - docker
+    - ansible
+    # dictionary/map
+    concepts:
+      - os: linux
+      - cloud: aws
+      - containerization: docker
+      - configuration_management: ansible
+  tasks:
+  - name: print credintials
+    ansible.builtin.debug:
+      msg: "name is {{ name }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}, tools are {{ tools }}, concepts are {{ concepts }}"
