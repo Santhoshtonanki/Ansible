@@ -5,8 +5,8 @@
   - person_name: santhosh tonanki
     age: 29
     course: DevOps
-    duration: 120
-    trainer: sivakumar_reddy
+    duration: "120 days"
+    trainer: "sivakumar_reddy"
   tasks:
   - name: print Perso_name
     ansible.builtin.debug:
