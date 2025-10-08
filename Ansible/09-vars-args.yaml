@@ -6,3 +6,4 @@
     ansible.builtin.debug:
       msg: "name is {{ name }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
 
+# ansible-playbook -i inventory.ini -e ansible_user=ec2-user -e ansible_password=DevOps321 -e "person_name='santhosh tonanki'" -e "age=29" -e "course=DevOps" -e "duration=120 days" -e "trainer=sivakumar_reddy" 09-vars-args.yaml
