@@ -1,0 +1,13 @@
+- name: variables from files
+  hosts: localhost
+  connection: local
+  vars:
+  - person_name: santhosh tonanki
+    age: 29
+    course: DevOps
+    duration: 120
+    trainer: sivakumar_reddy
+  tasks:
+  - name: print Perso_name
+    ansible.builtin.debug:
+      msg: "name is {{ person }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
