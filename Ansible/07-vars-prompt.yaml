@@ -1,15 +1,16 @@
-- name: variables from prompt
+- name: variables with prompt
   hosts: localhost
   connection: local
-  vars_prompt:
+  Vars_prompt:
   - name: "username"
     prompt: "what is your username?"
-    private: false
-    
+    Private: no
+
   - name: "password"
-    prompt: "what is your password?"
-    private: false
+    Prompt: "what is your password?"
+    Private: no
+
   tasks:
-  - name: "Print credintials"
+  - name: Print credintials
     ansible.builtin.debug:
-      msg: "Hello the world! username is {{ username }}, password is {{ password }}"
+      msg: " username is {{ username }} and password is {{ password }}"
