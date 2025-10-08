@@ -5,5 +5,4 @@
   tasks:
   - name: print credintials
     ansbile.builtin.debug:
-      msg: "name is {{ person_name }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
-      
+      msg: "person_name is {{ person_name }}, age is {{ age }}, course name is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
