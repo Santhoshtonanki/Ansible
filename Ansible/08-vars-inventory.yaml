@@ -8,6 +8,6 @@
     duration: "120 days"
     trainer: "sivakumar_reddy"
   tasks:
-  - name: print Perso_name
+  - name: print credintials
     ansible.builtin.debug:
       msg: "name is {{ person }}, age is {{ age }}, course is {{ course }}, duration is {{ duration }}, trainer is {{ trainer }}."
