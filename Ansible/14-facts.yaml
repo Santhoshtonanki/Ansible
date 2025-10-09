@@ -21,8 +21,9 @@
       state: prasent
 
   - name: "start nginx if Debian"
-    ansible_builtin.service:
+    ansible.builtin.service:
       name: nginx
-      state: "start"
+      state: "started"
       enabled: yes
     when: ansible_os_family == "Debian"
+    
