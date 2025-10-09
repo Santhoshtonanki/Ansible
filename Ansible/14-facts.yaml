@@ -6,7 +6,7 @@
   - name: "install nginx if RedHat"
     ansible.builtin.dnf:
       name: nginx
-      state: prasent
+      state: present
 
   - name: "start nginx if RedHat"
     ansible.builtin.service:
@@ -18,7 +18,7 @@
   - name: "install nginx if Debian"
     ansible.builtin.apt:
       name: nginx
-      state: prasent
+      state: present
 
   - name: "start nginx if Debian"
     ansible.builtin.service:
@@ -26,4 +26,4 @@
       state: "started"
       enabled: yes
     when: ansible_os_family == "Debian"
-    
+
