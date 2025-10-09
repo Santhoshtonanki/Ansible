@@ -1,6 +1,6 @@
 - name: checking facts
   hosts: localhost
-  connections: local
+  connection: local
   become: yes
   tasks:
   - name: "install nginx if RedHat"
