@@ -13,7 +13,7 @@
     ansible.builtin.service:
       name: nginx
       state: started
-      private: yes
+      enabled: yes
     when: ansible_os_family == "RedHat"
 
   - name: install nginx if Debian
@@ -26,6 +26,6 @@
     ansible.builtin.service:
       name: nginx
       state: started
-      private: yes
+      enabled: yes
     when: ansible_os_family == "Debian"
 
