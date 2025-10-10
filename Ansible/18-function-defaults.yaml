@@ -5,6 +5,5 @@
   tasks:
   - name: print default function
     ansible.builtin.debug:
-      msg: "Hello word! {{ name | default ('vishnu') }}"
+      msg: "Hello word! {{ default ('vishnu') }}"
 
-      
