@@ -1,13 +1,13 @@
 - name: install packages
   hosts: localhost
   connection: local
+  become: yes #if you are not in root user
   tasks:
   - name: print package names
     ansible.builtin.package:
-      name: "{{ item }}"
+      name: "{{ item }}"                #"{{ item }}" is reserved key word, only "item" means it will call to all pacakges.
       state: latest
     loop:
     - nginx
     - mysql
     - zip 
-    
