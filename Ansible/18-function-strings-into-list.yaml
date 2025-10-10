@@ -1,0 +1,12 @@
+- name: functions
+  hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    technologies: "DevOps, ansible, kubernates, shellscript, jenking, cicd, docker, terraform" # this is a string
+  tasks:
+  - name: print string to list
+    ansible.builtin.split:
+      msg: "Hello! your list is {{ technologies | split(',') }} "
+
+# string to list
