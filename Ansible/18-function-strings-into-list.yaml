@@ -6,7 +6,7 @@
     technologies: "DevOps, ansible, kubernates, shellscript, jenking, cicd, docker, terraform" # this is a string
   tasks:
   - name: converting string to list
-    ansible.builtin.split:
+    ansible.builtin.debug:
       msg: "Hello! your list is {{ technologies | split(',') }} "
 
 # string to list
