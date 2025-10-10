@@ -13,7 +13,7 @@
   tasks:
   - name: print the changes string into list
     ansible.builtin.debug:
-      msg: "{{ technologies | split(',') }"
+      msg: "{{ technologies | split(',') }}"
 
   - name: print the changes directory into list
     ansible.builtin.debug:
