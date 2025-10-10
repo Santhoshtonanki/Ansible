@@ -1,0 +1,20 @@
+# map or directories are changing into list 
+# map = directories: mapping ani anna leda directories anna both are same
+
+- name: functions
+  hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    technologies: "DevOps, ansible, kubernates, shellscript, jenking, cicd, docker, terraform"
+    tags:
+      Application: "payment"
+      Environment: "Dev"
+  tasks:
+  - name: print the changes string into list
+    ansible.builtin.debug:
+      msg: "{{ technologies | split(',') }"
+
+  - name: print the changes directory into list
+    ansible.builtin.debug:
+      msg: "Tags are {{ tags | dict2items }}"

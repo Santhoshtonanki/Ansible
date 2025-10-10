@@ -1,0 +1,31 @@
+# practice or 2nd variation for string changing into list
+
+- name: functions
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+  - name: print the list of animals form sprint ot list
+    ansible.builtin.debug:
+      msg: "Hello world! list of animals {{ 'dog, fox, cow, cat, ox, bull, lion, tiger, zebra, monkey, deer' | split(',') }}"
+
+# this filter function with our vars:
+# in "msg"  "Hello world! list of animals" not mandatory. you can run with out this.
+# if you use "Hello world! list of animals "  content will print hoigently,
+# if you not use "Hello world! list of animals" content will print vertically. other than that ther is not variation.
+# example: 
+# ok: [localhost] => {
+    #"msg": [
+     #   "dog",
+      #  " fox",
+       # " cow",
+        #" cat",
+        #" ox",
+        #" bull",
+        #" lion",
+        #" tiger",
+        #" zebra",
+        #" monkey",
+        #" deer"
+    #]. like this (with out "Hello world! list of animals ")
+

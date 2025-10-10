@@ -1,3 +1,5 @@
+# string changing into list
+
 - name: functions
   hosts: localhost
   connection: local
