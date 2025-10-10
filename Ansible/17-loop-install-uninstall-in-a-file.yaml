@@ -11,4 +11,8 @@
     - { name: "nginx", state: "absent" }
     - { name: "mysql", state: "absent" } 
     - { name: "zip", state: "latest"}
+
+
+    # "ansible localhost -m ansible.builtin.package -a "name=zip state=absent" this is the command for direct uninstall command 
+
     

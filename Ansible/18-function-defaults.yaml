@@ -1,0 +1,10 @@
+- name: function
+  hosts: localhost
+  connection: local
+  become: yes
+  tasks:
+  - name: print default function
+    ansible.builtin.debug:
+      msg: "Hello word! {{ name | default ('vishnu') }}"
+
+      
