@@ -5,4 +5,4 @@
   tasks:
   - name: print the list of animals form sprint ot list
     ansible.builtin.debug:
-      msg: "{{ 'dog, fox, cow, cat, ox, bull, lion, tiger, zebra, monkey, deer' | split(',') }}"
+      msg: Hello world! list of animals "{{ 'dog, fox, cow, cat, ox, bull, lion, tiger, zebra, monkey, deer' | split(',') }}"
