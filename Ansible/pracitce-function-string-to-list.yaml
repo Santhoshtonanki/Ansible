@@ -5,5 +5,4 @@
   tasks:
   - name: print the list of animals
     ansible.builtin.debug:
-      msg: "hello your animal is {{ dog, fox, cow, cat, ox, bull, lion, tiger, zebra, monkey, deer | split(',') }}"
-      
+      msg: "hello your animal list is {{ 'dog, fox, cow, cat, ox, bull, lion, tiger, zebra, monkey, deer' | split(',') }}"
