@@ -1,0 +1,34 @@
+- name: functions
+  hosts: localhost
+  connection: local
+  become: yes
+  vars:
+    technologies: "DevOps, ansible, kubernates, shellscript, jenking, cicd, docker, terraform"
+    tags:
+      Application: "payment"
+      Environment: "Dev"
+  tasks:
+  - name: print the changes string into list
+    ansible.builtin.debug:
+      msg: "{{ technologies | split(',') }}"
+
+  - name: print the changes directory into list
+    ansible.builtin.debug:
+      msg: "Tags are: {{ tags | dict2items }}"
+
+  - name: print the changes from directory into list
+    ansible.builtin.debug:
+      msg: "Tags map: {{ tags | dict2items | items2dict }}"
+
+  - name: read yaml and take it into variables
+    ansible.builtin.set_fact:
+      student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
+
+  - name: convert yaml into json
+    ansible.builtin.debug:
+      msg: "json: {{ student_yaml | to_json }}"
+
+  - name: copy the file in local in json format
+    ansible.builtin.copy:
+      dest: ./student-information.json
+      content: "{[ student_yaml | to_nice_json ]}"
