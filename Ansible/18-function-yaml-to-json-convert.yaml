@@ -38,7 +38,7 @@
       content: "{{ student_yaml | to_nice_json }}"
   
   - name: convert uppercase
-    ansible.builin.debug:
+    ansible.builtin.debug:
       msg: "{{ name | upper }}"
 
   - name: conert into lowercase
@@ -47,4 +47,4 @@
 
   - name: check valid ip address or not
     ansible.builtin.debug:
-      msg: {{ ipaddress | ansible.utils.ipaddr }}
+      msg: "{{ ipaddress | ansible.utils.ipaddr }}"
