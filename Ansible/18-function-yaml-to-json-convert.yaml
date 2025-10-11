@@ -31,4 +31,4 @@
   - name: copy the file in local in json format
     ansible.builtin.copy:
       dest: ./student-information.json
-      content: "{[ student_yaml | to_nice_json ]}"
+      content: "{{ student_yaml | to_nice_json }}"
