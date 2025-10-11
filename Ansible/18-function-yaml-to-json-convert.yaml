@@ -9,7 +9,7 @@
       Environment: "Dev"
     name: Santhosh Tonanki ALIvelu
     my_gmail: SanthoshtOnanki1996@gmail.com
-    ipaddress: 192.1168.22156.1135
+    ipaddress: 192.68.156.35
 
   tasks:
   - name: print the changes string into list
@@ -25,7 +25,7 @@
       msg: "Tags map: {{ tags | dict2items | items2dict }}"
 
   - name: read yaml and take it into variable
-    ansible.builtin.set_fact:
+    ansible.builtin.set_fact:  #set fact antey variable ni define cheyadam annamata
       student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
 
   - name: convert yaml into json
@@ -48,3 +48,11 @@
   - name: check valid ip address or not
     ansible.builtin.debug:
       msg: "{{ ipaddress | ansible.utils.ipaddr }}"
+
+  - name: grep for root
+    ansible.builtin.shell: cat /etc/passwd | grep root
+    regiser: "{{ command_output }}"
+
+  - name: print command_output
+    ansible.builtin.debug:
+      msg: "{{ command_output }}"
