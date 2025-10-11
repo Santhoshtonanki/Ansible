@@ -50,9 +50,11 @@
       msg: "{{ ipaddress | ansible.utils.ipaddr }}"
 
   - name: grep for root
+    # ansible.builtin.command: cat /etc/passwd | grep root. here we can use with this command also but this will use for small commands. for complex commands need to use "shell"
     ansible.builtin.shell: cat /etc/passwd | grep root
     regiser: "{{ command_output }}"
 
   - name: print command_output
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+      
