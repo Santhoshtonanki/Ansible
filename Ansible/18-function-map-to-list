@@ -21,4 +21,4 @@
 
   - name: print the changes from directory into list
     ansible.builtin.debug:
-      msg: "Tags map: {{ tags | items2dict }}"
+      msg: "Tags map: {{ tags | dict2items | items2dict }}"
