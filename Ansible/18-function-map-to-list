@@ -25,3 +25,11 @@
 
 # siva ikkada  last tak lo "dict2items" rayakunda "Tags map: {{ tags | items2dict }}" ila exicute chestey work out ayyingi but naku ala workout avvaledu " dict2items" must ga rayavalasi vachchindi karanam teleedu. naku telisi list aney variable nenu seperate create cheyyakapovadam vallaney aukunta. practice tast lo okkasari ala try chesta chooddam adey reason emo.
 
+# yes. ippudu confirm ayyindi "practice02-map-to-list.yaml" file lo nenu "listTags" create chesnu. appudu single ga exicute chestey workout ayyindi. listTags = "msg: "Tags map: {{ listTags | items2dict }}".
+
+#variable lo add chesina list of tag :
+# #listTags:
+#     - key: Application
+#       value: payment
+#     - key: Environment
+#       value: Dev
