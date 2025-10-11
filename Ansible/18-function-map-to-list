@@ -18,3 +18,7 @@
   - name: print the changes directory into list
     ansible.builtin.debug:
       msg: "Tags are: {{ tags | dict2items }}"
+
+  - name: pritn the changes from list to directory
+    ansible.builtin.debug:
+      msg: "Tags are: {{ tags list | intems2dict }}"
