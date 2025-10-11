@@ -7,8 +7,8 @@
     tags:
       Application: "payment"
       Environment: "Dev"
-      name: Santhosh Tonanki ALIvelu
-      gmail: SanthoshtOnanki1996@gmail.com
+      my_name: Santhosh Tonanki ALIvelu
+      my_gmail: SanthoshtOnanki1996@gmail.com
       ipaddress: 192.68.156.35
 
   tasks:
@@ -43,7 +43,7 @@
 
   - name: conert into lowercase
     ansible.builtin.debug:
-      msg: "{{ gmail | lower }}"
+      msg: "{{ my_gmail | lower }}"
 
   - name: check valid ip address or not
     ansible.builtin.debug:
