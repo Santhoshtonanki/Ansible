@@ -7,9 +7,9 @@
     tags:
       Application: "payment"
       Environment: "Dev"
-      my_name: Santhosh Tonanki ALIvelu
-      my_gmail: SanthoshtOnanki1996@gmail.com
-      ipaddress: 192.68.156.35
+    name: Santhosh Tonanki ALIvelu
+    my_gmail: SanthoshtOnanki1996@gmail.com
+    ipaddress: 192.68.156.35
 
   tasks:
   - name: print the changes string into list
