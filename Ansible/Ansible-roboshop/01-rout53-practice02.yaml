@@ -10,6 +10,7 @@
     domaine_name: lylbwof.xyz
     instances:
     - mongodb
+    - nginx
   
   tasks:
   - name: creating ec2_instances
