@@ -23,3 +23,27 @@
     loop: "{{ instances }}"
     register: ec2_output
   
+  - name: print ec2_output
+    ansible.builtin.debug:
+      msg: "{{ ec2_output }}"
+
+  - name: print public_ip_address
+    ansible.builtin.debug:
+      msg: "{{ item.instance[0].public_ip_address }}"
+    loop: "{{ ec2_output.results }}"
+
+  - name: print private_ip_address
+    ansible.builtin.debug:
+      msg: "{{ item.instance[0].private_ip_address }}"
+    looop: "{{ ec2_output.results }}"
+
+  - name: creating route53 record
+    amazon.aws.rout53:
+      state: present
+      zone: "{{ domaine_name }}"
+      record: "{{ item.item }}"."{{ domaine_name }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instance[0].public_ip_address }}"
+      overwrite: true
+    loop: "{{ ec2_output.results }}"
