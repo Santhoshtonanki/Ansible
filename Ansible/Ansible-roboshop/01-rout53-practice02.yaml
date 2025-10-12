@@ -7,7 +7,7 @@
     ami_id: ami-09c813fb71547fc4f
     sg_id: sg-031c227c91b0f22ac 
     zone_id: Z07584893CQK1749AT0H4
-    domain_id: lylbwof.xyz
+    domaine_id: lylbwof.xyz
     instances:
     - nginx
     - mongodb
@@ -41,8 +41,8 @@
   - name: create route53 record
     amazon.aws.route53:
       state: present
-      zone: "{{ domain_name }}"
-      record: "{{ item.item }}.{{ domain_name }}"
+      zone: "{{ domaine_name }}"
+      record: "{{ item.item }}.{{ domaine_name }}"
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
