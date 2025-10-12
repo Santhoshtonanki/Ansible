@@ -48,7 +48,7 @@
     amazon.aws.route53:
       state: present
       zone: "{{ domaine_name }}"
-      record: "{{ item.item }}.{{ domain_name }}" # mongodb.lylbwof.xyz ani create avutundi
+      record: "{{ item.item }}.{{ domaine_name }}" # mongodb.lylbwof.xyz ani create avutundi
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
