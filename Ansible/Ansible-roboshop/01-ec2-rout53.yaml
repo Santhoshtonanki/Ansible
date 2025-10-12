@@ -1,8 +1,8 @@
 # Step 1: pip install (if pip lekapothe first install pip)
-#dnf install python3-pip -y
+# dnf install python3-pip -y
 
 # Step 2: boto3 and botocore install cheyyadam
-#pip3 install boto3 botocore --user or 
+# pip3 install boto3 botocore --user or 
 # pip3.9 install botocore boto3
 
 

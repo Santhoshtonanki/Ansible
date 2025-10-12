@@ -12,7 +12,7 @@
     - nginx
     - mongodb
   
-  tags:
+  tasks:
   - name: creating ec2_instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
