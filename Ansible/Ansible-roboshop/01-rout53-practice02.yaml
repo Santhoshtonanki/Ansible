@@ -46,6 +46,6 @@
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
-    overwrite: true
+      overwrite: true
     loop: "{{ ece_output_results }}"
 
