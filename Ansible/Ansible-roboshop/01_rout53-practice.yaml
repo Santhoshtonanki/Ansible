@@ -1,0 +1,26 @@
+- name: creating ec2_instance
+  hosts: localhost
+  connection: local
+  become: yes
+
+  vars: 
+    ami_id: ami-09c813fb71547fc4f
+    sg_id: sg-031c227c91b0f22ac
+    zone_id: Z07584893CQK1749AT0H4
+    domaine_name: lylbwof.xyz
+    instances:
+    - nginx
+
+  tasks:
+  - name: creating ec2_instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: t2.micro
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+      tags:
+        name: "{{ item }}"
+      loop: "{{ instances }}"
+      register: ec2-output
+  
+  
