@@ -1,0 +1,29 @@
+- name: creating instances
+  hosts: localhost
+  connection: local
+  become: yes
+
+  vars:
+    ami_id: ami-09c813fb71547fc4f
+    sg_id: sg-031c227c91b0f22ac 
+    zone_id: Z07584893CQK1749AT0H4
+    domain_id: lylbwof.xyz
+    instances:
+    - nginx
+    - mongodb
+  
+  tags:
+  - name: creating ec2_instances
+    amazon.aws.ec2_instance:
+      name: "{{ item }}"
+      instance_type: t2.micro
+      security_group: "{{ sg_id }}"
+      image_id: "{{ ami_id }}"
+      tags:
+        Name: "{{ item }}"
+    loop: "{{ instances }}"
+    register: ec2_output
+
+  - name: print ec2_output
+    ansible.builtin.debug:
+      msg: "{{ ec2_output }}"
