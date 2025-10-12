@@ -45,12 +45,12 @@
   #   loop: "{{ ec2_output.results }}"
 
   - name: creating rout53 record
-    amazon.aws.rout53:
+    amazon.aws.route53:
       state: present
       zone: "{{ domaine_name }}"
       record: "{{ item.item }}.{{ domain_name }}" # mongodb.lylbwof.xyz ani create avutundi
       type: A
       ttl: 1
-      overwrite: true
       value: "{{ item.instances[0].private_ip_address }}"
+      overwrite: true
     loop: "{{ ec2_output.results }}"
