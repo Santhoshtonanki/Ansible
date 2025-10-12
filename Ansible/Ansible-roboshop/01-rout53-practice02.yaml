@@ -9,7 +9,6 @@
     zone_id: Z07584893CQK1749AT0H4
     domaine_id: lylbwof.xyz
     instances:
-    - nginx
     - mongodb
   
   tasks:
