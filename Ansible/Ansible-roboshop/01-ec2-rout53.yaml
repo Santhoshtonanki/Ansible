@@ -45,7 +45,7 @@
   #   loop: "{{ ec2_output.results }}"
 
   - name: creating rout53 record
-    amazon.aws.rout53
+    amazon.aws.rout53:
       state: present
       zone: "{{ domaine_name }}"
       record: "{{ item.item }}.{{ domain_name }}" # mongodb.lylbwof.xyz ani create avutundi
